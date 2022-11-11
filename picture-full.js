@@ -16,8 +16,8 @@ class ImageFull extends HTMLElement {
   }
 
   setConfig(config) {
-    if (!config.entity) {
-      throw new Error('You need to define an entity');
+    if (!config.image) {
+      throw new Error('You need to define an image');
     }
     this.config = config;
   }
