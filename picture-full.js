@@ -9,7 +9,7 @@ class ImageFull extends HTMLElement {
     }
 
     this.content.innerHTML = `
-      <img src="http://homeassistant.local:8123/local/bau-clash-royale-700x367.jpg">
+      <img style="display: block; width: 100%; height: 100%; object-fit: cover;" src="http://homeassistant.local:8123/local/bau-clash-royale-700x367.jpg">
     `;
   }
 
