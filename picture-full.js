@@ -6,7 +6,7 @@ class ImageFull extends HTMLElement {
     
     if (!this.content) {
       this.innerHTML = `
-        <ha-card style="height: 100%;"></ha-card>
+        <ha-card></ha-card>
       `;
       this.content = this.querySelector('ha-card');
     }
