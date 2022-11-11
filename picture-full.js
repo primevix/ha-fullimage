@@ -3,11 +3,9 @@ class ImageFull extends HTMLElement {
   set hass(hass) {
     if (!this.content) {
       this.innerHTML = `
-        <ha-card>
-          <div class="card-content"></div>
-        </ha-card>
+        <ha-card></ha-card>
       `;
-      this.content = this.querySelector('div');
+      this.content = this.querySelector('ha-card');
     }
 
     this.content.innerHTML = `
