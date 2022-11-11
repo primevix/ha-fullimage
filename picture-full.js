@@ -19,7 +19,16 @@ class ImageFull extends HTMLElement {
     if (!config.image) {
       throw new Error('You need to define an image');
     }
-    this.config = config;
+    this.config = config;  
+    
+    const card = this.querySelector('ha-card');
+    const style = document.createElement('style');
+        style.textContent = `
+          ha-card { 
+            overflow: hidden;
+            height: 100%;
+        }`;	
+    card.appendChild(style);    
   }
 
   getCardSize() {
