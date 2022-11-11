@@ -6,7 +6,7 @@ class ImageFull extends HTMLElement {
     const image = card.image;
       
     if (!this.content) {
-      this.innerHTML = `<ha-card></ha-card>`;
+      this.innerHTML = `<ha-card style="overflow: hidden; height: 100%;"></ha-card>`;
       this.content = this.querySelector('ha-card');
     }
     
@@ -18,17 +18,7 @@ class ImageFull extends HTMLElement {
   setConfig(config) {
     if (!config.image) {
       throw new Error('You need to define an image');
-    }
-   
-    const card = this.querySelector('ha-card');
-    const style = document.createElement('style');
-        style.textContent = `
-          ha-card { 
-            overflow: hidden;
-            height: 100%;
-        }`;	
-    card.appendChild(style); 
-    
+    }   
     this.config = config;   
   }
 
