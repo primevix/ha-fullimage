@@ -1,11 +1,9 @@
-class ContentCardExample extends HTMLElement {
-  // Whenever the state changes, a new `hass` object is set. Use this to
-  // update your content.
+class ImageFull extends HTMLElement {
+
   set hass(hass) {
-    // Initialize the content if it's not there yet.
     if (!this.content) {
       this.innerHTML = `
-        <ha-card header="Example-card">
+        <ha-card header="Image-full-card">
           <div class="card-content"></div>
         </ha-card>
       `;
@@ -35,4 +33,12 @@ class ContentCardExample extends HTMLElement {
   }
 }
 
-customElements.define('content-card-example', ContentCardExample);
+customElements.define('image-full', ImageFull);
+
+window.customCards = window.customCards || [];
+window.customCards.push({
+  type: 'image-full',
+  name: 'Image Full',
+  preview: false,
+  description: 'A simple card to display a full image.'
+});
