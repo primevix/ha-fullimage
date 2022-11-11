@@ -21,7 +21,7 @@ class ImageFull extends HTMLElement {
   }
 
   getCardSize() {
-    return 3;
+    return 1;
   }
 }
 
