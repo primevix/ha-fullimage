@@ -3,21 +3,15 @@ class ImageFull extends HTMLElement {
   set hass(hass) {
     if (!this.content) {
       this.innerHTML = `
-        <ha-card header="Image-full-card">
+        <ha-card>
           <div class="card-content"></div>
         </ha-card>
       `;
       this.content = this.querySelector('div');
     }
 
-    const entityId = this.config.entity;
-    const state = hass.states[entityId];
-    const stateStr = state ? state.state : 'unavailable';
-
     this.content.innerHTML = `
-      The state of ${entityId} is ${stateStr}!
-      <br><br>
-      <img src="http://via.placeholder.com/350x150">
+      <img src="http://homeassistant.local:8123/local/bau-clash-royale-700x367.jpg">
     `;
   }
 
