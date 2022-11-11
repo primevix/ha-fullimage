@@ -6,7 +6,8 @@ class ImageFull extends HTMLElement {
     
     if (!this.content) {
       this.innerHTML = `
-        <ha-card></ha-card>
+        <ha-card>
+        </ha-card>
       `;
       this.content = this.querySelector('ha-card');
     }
@@ -24,7 +25,7 @@ class ImageFull extends HTMLElement {
   }
 
   getCardSize() {
-    return 1;
+    return 3;
   }
 }
 
