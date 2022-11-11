@@ -2,7 +2,7 @@ class ImageFull extends HTMLElement {
 
   set hass(hass) {
     
-    const image = this.config.image;
+    const image = config.image;
     
     if (!this.content) {
       this.innerHTML = `
