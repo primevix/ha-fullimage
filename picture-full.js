@@ -1,7 +1,8 @@
 class ImageFull extends HTMLElement {
 
   set hass(hass) {    
-    //const image = config.image;
+    
+    const image = config.image;
     //<img style="display: block; width: 100%; height: 100%; object-fit: cover;" src="http://homeassistant.local:8123/${image}">
     
     if (!this.content) {
