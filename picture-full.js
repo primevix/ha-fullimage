@@ -2,7 +2,7 @@ class ImageFull extends HTMLElement {
 
   set hass(hass) {
     
-    const image = config.image 
+    const image = this.config.image;
     
     if (!this.content) {
       this.innerHTML = `
@@ -10,7 +10,7 @@ class ImageFull extends HTMLElement {
       `;
       this.content = this.querySelector('ha-card');
     }
-
+    
     this.content.innerHTML = `
       <img style="display: block; width: 100%; height: 100%; object-fit: cover;" src="http://homeassistant.local:8123/${image}">
     `;
