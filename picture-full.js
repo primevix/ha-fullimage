@@ -4,7 +4,6 @@ class ImageFull extends HTMLElement {
     
     const card = this.config;
     const image = card.image;
-    const fullImage = card.full-image;
     
     if (!this.content) {
       this.innerHTML = `<ha-card style="overflow: hidden; height: 100%;"></ha-card>`;
@@ -14,7 +13,6 @@ class ImageFull extends HTMLElement {
     this.content.innerHTML = `      
       <img style="display: block; width: 100%; height: 100%; object-fit: cover;" src="http://homeassistant.local:8123/${image}">
     `;
-
   }
 
   setConfig(config) {
