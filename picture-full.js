@@ -4,6 +4,9 @@ class ImageFull extends HTMLElement {
     
     const card = this.config;
     const image = card.image;
+    
+    //novo
+    if (!card.full-image) card.full-image = true;
       
     if (!this.content) {
       this.innerHTML = `<ha-card style="overflow: hidden; height: 100%;"></ha-card>`;
@@ -11,8 +14,16 @@ class ImageFull extends HTMLElement {
     }
     
     this.content.innerHTML = `      
-      <img style="display: block; width: 100%; height: 100%; object-fit: cover;" src="http://homeassistant.local:8123/${image}">
+      <img style="display: block; width: 100%;" src="http://homeassistant.local:8123/${image}">
     `;
+    
+    //height: 100%; object-fit: cover;
+    if (card.full-image) {
+      this.cardImage = this.querySelector('img');
+      this.cardImage.style.height = '100%'
+      this.cardImage.style.object-fit = 'cover'
+    }    
+    
   }
 
   setConfig(config) {
